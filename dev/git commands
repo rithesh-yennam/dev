@@ -1,0 +1,132 @@
+Here's a guide to the most commonly used Git and GitHub commands:
+
+### **Git Commands**
+
+1. **Basic Setup**
+   - **Configure Git:**
+     ```bash
+     git config --global user.name "Your Name"
+     git config --global user.email "your.email@example.com"
+     ```
+
+2. **Repository Management**
+   - **Initialize a Git repository:**
+     ```bash
+     git init
+     ```
+   - **Clone a repository:**
+     ```bash
+     git clone <repository_url>
+     ```
+
+3. **Basic Commands**
+   - **Check the status of your files:**
+     ```bash
+     git status
+     ```
+   - **Add files to staging area:**
+     ```bash
+     git add <file_name>
+     git add .  # Add all changes
+     ```
+   - **Commit changes:**
+     ```bash
+     git commit -m "Your commit message"
+     ```
+   - **View commit history:**
+     ```bash
+     git log
+     ```
+
+4. **Branching and Merging**
+   - **Create a new branch:**
+     ```bash
+     git branch <branch_name>
+     ```
+   - **Switch to another branch:**
+     ```bash
+     git checkout <branch_name>
+     ```
+   - **Create and switch to a new branch:**
+     ```bash
+     git checkout -b <branch_name>
+     ```
+   - **Merge branches:**
+     ```bash
+     git merge <branch_name>
+     ```
+   - **Delete a branch:**
+     ```bash
+     git branch -d <branch_name>
+     ```
+
+5. **Working with Remotes**
+   - **Add a remote repository:**
+     ```bash
+     git remote add origin <repository_url>
+     ```
+   - **View remote repositories:**
+     ```bash
+     git remote -v
+     ```
+   - **Push changes to remote repository:**
+     ```bash
+     git push origin <branch_name>
+     ```
+   - **Pull changes from remote repository:**
+     ```bash
+     git pull origin <branch_name>
+     ```
+   - **Fetch changes from remote without merging:**
+     ```bash
+     git fetch origin
+     ```
+
+6. **Undoing Changes**
+   - **Discard changes in the working directory:**
+     ```bash
+     git checkout -- <file_name>
+     ```
+   - **Unstage changes:**
+     ```bash
+     git reset HEAD <file_name>
+     ```
+   - **Revert a commit:**
+     ```bash
+     git revert <commit_hash>
+     ```
+   - **Reset to a previous commit:**
+     ```bash
+     git reset --hard <commit_hash>
+     ```
+
+### **GitHub Commands**
+
+1. **Create a New Repository**
+   - On GitHub, go to the repositories tab and click "New". Follow the prompts to create a new repository.
+
+2. **Connecting to a GitHub Repository**
+   - After creating a repository on GitHub, link it to your local repository:
+     ```bash
+     git remote add origin https://github.com/username/repository.git
+     ```
+
+3. **Fork a Repository**
+   - Click the "Fork" button on the top right of a repository's GitHub page to create your own copy.
+
+4. **Pull Requests**
+   - **Create a pull request:** After pushing changes to your fork, you can create a pull request to the original repository by clicking the "New pull request" button.
+   - **Review pull requests:** Project maintainers can review and merge pull requests on GitHub.
+
+5. **Issue Tracking**
+   - **Create an issue:** Navigate to the "Issues" tab in a repository and click "New issue" to report bugs or suggest features.
+   - **Comment on issues:** Provide feedback or additional information by commenting on existing issues.
+
+6. **GitHub Actions**
+   - Automate workflows directly on GitHub, such as CI/CD pipelines, using GitHub Actions.
+
+### **Tips**
+- **.gitignore:** Create a `.gitignore` file in your repository to specify files or directories that should not be tracked by Git.
+- **SSH Keys:** Set up SSH keys for secure, password-less access to GitHub repositories.
+
+Let me know if you need more details or help with specific commands!

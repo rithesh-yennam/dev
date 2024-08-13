@@ -1,0 +1,169 @@
+Docker provides various commands for managing content, including images, containers, volumes, and networks. Below is an overview of key Docker commands for content management:
+
+### 1. *Image Management*
+
+- *List Docker Images*
+  bash
+  docker images
+  
+  Lists all Docker images available on your system.
+
+- *Pull an Image from a Registry*
+  bash
+  docker pull <image_name>
+  
+  Downloads a Docker image from a Docker registry (e.g., Docker Hub).
+
+- *Build an Image*
+  bash
+  docker build -t <image_name> .
+  
+  Builds a Docker image from a Dockerfile in the current directory.
+
+- *Tag an Image*
+  bash
+  docker tag <image_id> <new_image_name>
+  
+  Tags an existing image with a new name.
+
+- *Remove an Image*
+  bash
+  docker rmi <image_id>
+  
+  Removes one or more Docker images from your system.
+
+- *Inspect an Image*
+  bash
+  docker inspect <image_name>
+  
+  Displays detailed information about a specific image.
+
+### 2. *Container Management*
+
+- *List Running Containers*
+  bash
+  docker ps
+  
+  Lists all currently running Docker containers.
+
+- *List All Containers (Running and Stopped)*
+  bash
+  docker ps -a
+  
+  Lists all Docker containers, including those that are stopped.
+
+- *Start a Container*
+  bash
+  docker start <container_id>
+  
+  Starts a stopped container.
+
+- *Stop a Container*
+  bash
+  docker stop <container_id>
+  
+  Stops a running container.
+
+- *Remove a Container*
+  bash
+  docker rm <container_id>
+  
+  Removes a stopped container.
+
+- *Create and Run a Container*
+  bash
+  docker run -d -p 80:80 --name <container_name> <image_name>
+  
+  Creates and runs a new container from an image. The -d flag runs the container in detached mode.
+
+- *Attach to a Running Container*
+  bash
+  docker attach <container_id>
+  
+  Attaches your terminal to a running container.
+
+- *Execute a Command in a Running Container*
+  bash
+  docker exec -it <container_id> <command>
+  
+  Executes a command inside a running container (e.g., /bin/bash to open a shell).
+
+### 3. *Volume Management*
+
+- *List Volumes*
+  bash
+  docker volume ls
+  
+  Lists all Docker volumes.
+
+- *Create a Volume*
+  bash
+  docker volume create <volume_name>
+  
+  Creates a new Docker volume.
+
+- *Remove a Volume*
+  bash
+  docker volume rm <volume_name>
+  
+  Removes a Docker volume.
+
+- *Inspect a Volume*
+  bash
+  docker volume inspect <volume_name>
+  
+  Displays detailed information about a specific volume.
+
+### 4. *Network Management*
+
+- *List Networks*
+  bash
+  docker network ls
+  
+  Lists all Docker networks.
+
+- *Create a Network*
+  bash
+  docker network create <network_name>
+  
+  Creates a new Docker network.
+
+- *Remove a Network*
+  bash
+  docker network rm <network_name>
+  
+  Removes a Docker network.
+
+- *Inspect a Network*
+  bash
+  docker network inspect <network_name>
+  
+  Displays detailed information about a specific network.
+
+- *Connect a Container to a Network*
+  bash
+  docker network connect <network_name> <container_name>
+  
+  Connects a running container to a network.
+
+- *Disconnect a Container from a Network*
+  bash
+  docker network disconnect <network_name> <container_name>
+  
+  Disconnects a running container from a network.
+
+### 5. *Docker System Cleanup*
+
+- *Remove All Unused Data*
+  bash
+  docker system prune
+  
+  Removes all stopped containers, dangling images, and unused networks.
+
+- *Remove All Unused Volumes*
+  bash
+  docker volume prune
+  
+  Removes all unused Docker volumes.
+
+These commands provide a comprehensive toolkit for managing Docker content, from creating and handling images and containers to managing volumes and networks.
